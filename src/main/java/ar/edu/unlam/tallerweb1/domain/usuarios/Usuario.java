@@ -19,9 +19,18 @@ public class Usuario {
 	// el atributo, la misma admite nulos, y el tipo de dato se deduce del tipo de dato de java.
 	private String email;
 	private String password;
-	private String rol;
+	private RolUsuario rol;
 	private Boolean activo = false;
-	
+
+	public Usuario(String mail, String password) {
+		this.email = mail;
+		this.password = password;
+	}
+
+	public Usuario() {
+
+	}
+
 	public Long getId() {
 		return id;
 	}
@@ -40,10 +49,10 @@ public class Usuario {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String getRol() {
+	public RolUsuario getRol() {
 		return rol;
 	}
-	public void setRol(String rol) {
+	public void setRol(RolUsuario rol) {
 		this.rol = rol;
 	}
 	public Boolean getActivo() {
@@ -52,11 +61,6 @@ public class Usuario {
 	public void setActivo(Boolean activo) {
 		this.activo = activo;
 	}
-
-	public boolean activo() {
-		return activo;
-    }
-
     public void activar() {
 		activo = true;
     }

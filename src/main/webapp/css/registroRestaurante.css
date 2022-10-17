@@ -1,0 +1,43 @@
+header{
+    background-color: rgba(68, 6, 6, 0.658);
+    padding: 1em;
+}
+
+body {
+    text-align: center;
+    padding: 2em;
+}
+
+main{
+    padding: 1em;
+}
+
+div{
+    display: inline-block;
+}
+
+.log-form{
+    background-color: gray;
+    padding: 10px;
+    text-align: center;
+    max-width: max-content;
+}
+
+footer{
+    background-color: rgba(68, 6, 6, 0.658);
+    padding: 1em;
+}
+
+footer div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+.btn{
+    color: white;
+    background-color: rgb(57, 57, 226);
+}
