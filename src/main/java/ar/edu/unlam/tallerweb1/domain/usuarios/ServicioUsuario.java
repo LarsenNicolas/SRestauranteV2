@@ -10,13 +10,13 @@ public class ServicioUsuario {
     private RepositorioUsuario repositorioUsuario;
 
     @Autowired
-    public ServicioUsuario(RepositorioUsuario servicioLoginDao){
-        this.repositorioUsuario = servicioLoginDao;
+    public ServicioUsuario(RepositorioUsuario repositorioUsuario){
+        this.repositorioUsuario = repositorioUsuario;
     }
-
 
     public void seleccionarRol(String rolUsuario, Usuario currentUser) {
         currentUser.setRol(RolUsuario.valueOf(rolUsuario));
         this.repositorioUsuario.guardar(currentUser);
     }
+
 }

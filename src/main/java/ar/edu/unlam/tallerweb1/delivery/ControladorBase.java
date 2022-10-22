@@ -6,7 +6,6 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class ControladorBase {
     protected SessionService sessionService;
-
     public ControladorBase() {}
     public ControladorBase(SessionService sessionService) {
         this.sessionService = sessionService;

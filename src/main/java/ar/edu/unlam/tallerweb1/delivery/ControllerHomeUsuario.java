@@ -1,13 +1,12 @@
 package ar.edu.unlam.tallerweb1.delivery;
 
-import ar.edu.unlam.tallerweb1.domain.usuarios.RolUsuario;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-public class ControlerHome extends ControladorBase {
+public class ControllerHomeUsuario extends ControladorBase {
     @RequestMapping("/AdministradorHome")
     public ModelAndView administradorHome() {
         ModelMap modelo = new ModelMap();
