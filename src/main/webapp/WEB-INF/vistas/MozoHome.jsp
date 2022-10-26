@@ -17,6 +17,7 @@
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
 </head>
 <body>
+    <jsp:include page="background.jsp"/>
     <div class = "container">
       <h1>Mozo Home</h1>
     </div>

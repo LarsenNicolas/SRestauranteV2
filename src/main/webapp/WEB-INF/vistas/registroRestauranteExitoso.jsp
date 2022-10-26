@@ -13,6 +13,7 @@
     <title>Restaurante Registro Exitoso</title>
 </head>
 <body>
+<jsp:include page="background.jsp"/>
 <header>
     <h1>S.I.R.</h1>
     <h2>Sistema Integral de Restaurante</h2>

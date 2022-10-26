@@ -17,8 +17,10 @@
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
 </head>
 <body>
+    <jsp:include page="background.jsp"/>
     <div class = "container">
       <h1>Administrador Home</h1>
+        <a href="registrarRestaurante"	>Registrar restaurante</a>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" ></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>

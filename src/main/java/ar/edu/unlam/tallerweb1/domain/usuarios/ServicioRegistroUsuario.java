@@ -7,21 +7,21 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 @Transactional
 public class ServicioRegistroUsuario {
-    private RepositorioUsuario repositorioUsuario;
     private SessionService sessionService;
+    private RepositorioUsuario repositorioUsuario;
 
     @Autowired
-    public ServicioRegistroUsuario(RepositorioUsuario servicioLoginDao){
-        this.repositorioUsuario = servicioLoginDao;
-        this.sessionService = new SessionService();
+    public ServicioRegistroUsuario(RepositorioUsuario repositorioUsuario, SessionService sessionService){
+        this.repositorioUsuario = repositorioUsuario;
+        this.sessionService = sessionService;
     }
     public void registrarNuevoUsuario(String mail, String password) {
         try {
             this.validarMail(mail);
             this.validarPassword(password);
             Usuario nuevoUsuario = new Usuario(mail, password);
-            repositorioUsuario.guardar(nuevoUsuario);
             sessionService.setActualUser(nuevoUsuario);
+            repositorioUsuario.guardar(nuevoUsuario);
         } catch (Exception e) {
             throw new RuntimeException("Error al registrar nuevo usuario");
         }

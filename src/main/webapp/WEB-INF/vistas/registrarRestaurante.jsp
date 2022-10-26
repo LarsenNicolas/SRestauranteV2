@@ -7,12 +7,12 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="css/registroRestaurante.css" rel="stylesheet" >
     <link href="css/bootstrap.min.css" rel="stylesheet" >
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
     <title>Restaurante Registro</title>
 </head>
 <body>
+<jsp:include page="background.jsp"/>
 <header>
     <h1>S.I.R.</h1>
     <h2>Sistema Integral de Restaurante</h2>

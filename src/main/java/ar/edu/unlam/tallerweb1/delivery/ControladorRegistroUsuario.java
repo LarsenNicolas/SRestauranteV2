@@ -12,12 +12,13 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class ControladorRegistroUsuario {
-
+    private SessionService sessionService;
     private ServicioRegistroUsuario servicioRegistroUsuario;
 
     @Autowired
     public ControladorRegistroUsuario(ServicioRegistroUsuario servicioRegistroUsuario, SessionService sessionService){
         this.servicioRegistroUsuario = servicioRegistroUsuario;
+        this.sessionService = sessionService;
     }
 
     @RequestMapping("/registrar-usuario")
@@ -34,7 +35,7 @@ public class ControladorRegistroUsuario {
             servicioRegistroUsuario.registrarNuevoUsuario(datosLogin.getEmail(), datosLogin.getPassword());
             return new ModelAndView("redirect:/elegir-role", model);
         } catch (Exception e){
-            model.put("error", "Usuario o clave incorrecta");
+            model.put("error", e.getMessage());
             return new ModelAndView("registro-usuario", model);
         }
     }

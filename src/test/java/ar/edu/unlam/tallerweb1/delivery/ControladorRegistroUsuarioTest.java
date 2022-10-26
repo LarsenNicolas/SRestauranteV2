@@ -16,19 +16,16 @@ public class ControladorRegistroUsuarioTest extends SpringTest {
 
     @Before
     public void init(){
-        this.servicioRegistroUsuario = new ServicioRegistroUsuario(mock(RepositorioUsuarioImpl.class));
+        this.servicioRegistroUsuario = new ServicioRegistroUsuario(mock(RepositorioUsuarioImpl.class), mock(SessionService.class));
         this.controladorRegistroUsuario = new ControladorRegistroUsuario(this.servicioRegistroUsuario, this.sessionService);
     }
 
     @Test
     public void alRegistrarmeCorrectamenteDebeRedireccionarmeASeleccionDeRol() {
-        dadoUnRegistroExitoso();
-    }
-
-    private void dadoUnRegistroExitoso() {
         DatosLogin datos = new DatosLogin();
         datos.setEmail("test@test.com");
         datos.setPassword("1234");
         assertThat(controladorRegistroUsuario.validarRegistro(datos).getViewName()).isEqualTo("redirect:/elegir-role");
     }
+
 }

@@ -25,6 +25,7 @@ public class Usuario {
 	public Usuario(String mail, String password) {
 		this.email = mail;
 		this.password = password;
+		this.rol = null;
 	}
 
 	public Usuario() {

@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-public class ControllerHomeUsuario extends ControladorBase {
+public class ControllerHomeUsuario {
     @RequestMapping("/AdministradorHome")
     public ModelAndView administradorHome() {
         ModelMap modelo = new ModelMap();
@@ -20,8 +20,16 @@ public class ControllerHomeUsuario extends ControladorBase {
     }
 
     @RequestMapping("/MozoHome")
-    public ModelAndView irAElegirRol() {
+    public ModelAndView mozoHome() {
         ModelMap modelo = new ModelMap();
         return new ModelAndView("MozoHome", modelo);
     }
+
+    @RequestMapping("/goHome")
+    public ModelAndView irAHome() {
+
+        ModelMap modelo = new ModelMap();
+        return new ModelAndView("MozoHome", modelo);
+    }
+
 }
