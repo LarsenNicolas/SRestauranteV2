@@ -20,7 +20,6 @@
 </head>
 <body>
 <jsp:include page="background.jsp"/>
-
     <div class="flip-card-container" style="--hue: 220">
         <div class="flip-card">
 

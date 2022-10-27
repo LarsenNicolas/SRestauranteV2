@@ -13,10 +13,7 @@
     <title>Mesa Asiganada</title>
 </head>
 <body>
-<header>
-    <h1>S.I.R.</h1>
-    <h2>Sistema Integral de Restaurante</h2>
-</header>
+<jsp:include page="background.jsp"/>
 <main>
     <h2>Mesa Asignada</h2>
     <div>
@@ -25,14 +22,5 @@
     <input type="submit" value="Enviar" >
     <button id="mostarMenu">Mostar Menu</button>
 </main>
-<footer>
-    <h3>S.I.R. (Sistema Integral de Restaurante)</h3>
-    <div>
-        <h3>Creadores: </h3>
-        <p>Bringa Juan Manuel -</p>
-        <p>Galvan Florencia -</p>
-        <p>Larsen Nicolas -</p>
-    </div>
-</footer>
 </body>
 </html>

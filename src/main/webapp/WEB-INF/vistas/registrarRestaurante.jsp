@@ -13,11 +13,10 @@
 </head>
 <body>
 <jsp:include page="background.jsp"/>
-<header>
-    <h1>S.I.R.</h1>
-    <h2>Sistema Integral de Restaurante</h2>
-</header>
-<main>
+<%--TODO pasar esto al include con un cif--%>
+<div id="logout" class="logout-btn">
+    <a href="login">Log out</a>
+</div>
     <h2>Registrar Restaurante</h2>
     <div class="log-form">
         <form action="#" onsubmit="validar()" name="form">
@@ -57,18 +56,6 @@
             </div>
         </form>
     </div>
-</main>
-<footer>
-    <h3>S.I.R. (Sistema Integral de Restaurante)</h3>
-    <div>
-        <h3>Creadores: </h3>
-        <p>Bringa Juan Manuel -</p>
-        <p>Galvan Florencia -</p>
-        <p>Juhal Lorena -</p>
-        <p>Larsen Nicolas -</p>
-        <p>Rementario Brenda</p>
-    </div>
-</footer>
 </body>
 </html>
 

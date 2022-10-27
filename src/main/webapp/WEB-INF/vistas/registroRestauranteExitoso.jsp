@@ -14,11 +14,10 @@
 </head>
 <body>
 <jsp:include page="background.jsp"/>
-<header>
-    <h1>S.I.R.</h1>
-    <h2>Sistema Integral de Restaurante</h2>
-
-</header>
+<%--//TODO pasar esto al include con un cif--%>
+<div id="logout" class="logout-btn">
+    <a href="login">Log out</a>
+</div>
 <main>
     <h2>Registro Exitoso!</h2>
     <h2>Se registro su Restaurante ${nombre}</h2>
@@ -26,16 +25,5 @@
     <button class="btn">Ir a Menu</button>
     <button class="btn">Ir a Control de Personal</button>
 </main>
-<footer>
-    <h3>S.I.R. (Sistema Integral de Restaurante)</h3>
-    <div>
-        <h3>Creadores: </h3>
-        <p>Bringa Juan Manuel -</p>
-        <p>Galvan Florencia -</p>
-        <p>Juhal Lorena -</p>
-        <p>Larsen Nicolas -</p>
-        <p>Rementario Brenda</p>
-    </div>
-</footer>
 </body>
 </html>

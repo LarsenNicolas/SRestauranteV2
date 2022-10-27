@@ -13,10 +13,12 @@
     <title>Solicitar Mesa</title>
 </head>
 <body>
-<header>
-    <h1>S.I.R.</h1>
-    <h2>Sistema Integral de Restaurante</h2>
-</header>
+<jsp:include page="background.jsp"/>
+<%--//TODO pasar esto al include con un cif--%>
+<div id="logout" class="logout-btn">
+    <a href="login">Log out</a>
+    <i class="fas fa-chevron-right"></i>
+</div>
 <main>
     <h2>Solicitar Mesa</h2>
     <div class="log-form">
@@ -35,14 +37,5 @@
         </form>
     </div>
 </main>
-<footer>
-    <h3>S.I.R. (Sistema Integral de Restaurante)</h3>
-    <div>
-        <h3>Creadores: </h3>
-        <p>Bringa Juan Manuel -</p>
-        <p>Galvan Florencia -</p>
-        <p>Larsen Nicolas -</p>
-    </div>
-</footer>
 </body>
 </html>

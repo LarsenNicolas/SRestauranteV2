@@ -18,6 +18,11 @@
 </head>
 <body>
     <jsp:include page="background.jsp"/>
+<%--    //TODO pasar esto al include con un cif--%>
+    <div id="logout" class="logout-btn">
+        <a href="login">Log out</a>
+        <i class="fas fa-chevron-right"></i>
+    </div>
     <div class = "container">
       <h1>Mozo Home</h1>
     </div>

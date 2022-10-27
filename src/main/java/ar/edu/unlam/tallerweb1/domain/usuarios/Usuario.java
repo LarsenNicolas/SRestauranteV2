@@ -66,4 +66,7 @@ public class Usuario {
 	public void setGusto(Gusto gusto) {
 		this.gusto = gusto;
 	}
+	public void setRestriccionAlimentario(RestriccionAlimentaria restriccion) {
+		this.restriccionAlimentaria = restriccion;
+	}
 }

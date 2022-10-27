@@ -41,7 +41,7 @@ public class ControladorLogin {
 			if (usuarioBuscado.getRol() == null) {
 				return new ModelAndView("redirect:/elegir-role");
 			}
-			return new ModelAndView("redirect:/home");
+			return new ModelAndView("redirect:/"+usuarioBuscado.getRol()+"Home");
 		}
 		catch (Exception e) {
 			model.put("error", e.getMessage());
