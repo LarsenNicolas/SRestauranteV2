@@ -113,21 +113,5 @@
 
         </div>
     </div>
-<%--    <div class = "container">--%>
-<%--        <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">--%>
-<%--            <form:form action="setear-rol" method="POST" modelAttribute="rolUsuario">--%>
-<%--                <h3 class="form-signin-heading">Taller Web I</h3>--%>
-<%--                <hr class="colorgraph"><br>--%>
-
-<%--                <select name="rolUsuario" id="rolUsuario">--%>
-<%--                    <option value="Administrador">Administrador</option>--%>
-<%--                    <option value="Mozo">Mozo</option>--%>
-<%--                    <option value="Cliente">Cliente</option>--%>
-<%--                </select>--%>
-
-<%--                <button class="btn btn-lg btn-primary btn-block" Type="Submit"/>Seleccionar rol</button>--%>
-<%--            </form:form>--%>
-<%--        </div>--%>
-<%--    </div>--%>
 </body>
 </html>

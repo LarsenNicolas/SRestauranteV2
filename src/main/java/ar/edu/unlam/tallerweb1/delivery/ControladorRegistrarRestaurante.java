@@ -14,10 +14,6 @@ public class ControladorRegistrarRestaurante {
     public ControladorRegistrarRestaurante(){
     }
 
-    public ControladorRegistrarRestaurante(String nombreRestaurante){
-
-    }
-
     @RequestMapping(path = "/registrarRestaurante", method = RequestMethod.GET)
     public ModelAndView irARegistrarRestaurante() {
         ModelMap modelo = new ModelMap();
