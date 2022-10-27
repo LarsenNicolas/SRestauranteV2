@@ -35,15 +35,16 @@ public class ControladorLogin {
 	@RequestMapping(path = "/validar-login", method = RequestMethod.POST)
 	public ModelAndView validarLogin(@ModelAttribute("datosLogin") DatosLogin datosLogin) {
 		ModelMap model = new ModelMap();
-		Usuario usuarioBuscado = servicioLogin.consultarUsuario(datosLogin.getEmail(), datosLogin.getPassword());
-		if (usuarioBuscado != null) {
+		try {
+			Usuario usuarioBuscado = servicioLogin.consultarUsuario(datosLogin.getEmail(), datosLogin.getPassword());
 			this.sessionService.setActualUser(usuarioBuscado);
 			if (usuarioBuscado.getRol() == null) {
 				return new ModelAndView("redirect:/elegir-role");
 			}
 			return new ModelAndView("redirect:/home");
-		} else {
-			model.put("error", "Usuario o clave incorrecta");
+		}
+		catch (Exception e) {
+			model.put("error", e.getMessage());
 			return new ModelAndView("login", model);
 		}
 	}

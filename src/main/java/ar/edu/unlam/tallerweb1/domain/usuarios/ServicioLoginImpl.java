@@ -23,7 +23,11 @@ public class ServicioLoginImpl implements ServicioLogin {
 
 	@Override
 	public Usuario consultarUsuario (String email, String password) {
-		return repositorioUsuario.buscarUsuario(email, password);
+		try {
+			return repositorioUsuario.buscarUsuario(email, password);
+		} catch (Exception e) {
+			throw new RuntimeException("Error en mail o contrasenia");
+		}
 	}
 
 }
